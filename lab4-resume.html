@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Shehroz Riaz - Resume</title>
+
+<!-- Web Engineering Lab 4 | Sehrosh Riaz | ID: 502741 -->
+
+<style>
+/* ---------- RESET (box model) ---------- */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #fff5e6;
+    color: #333;
+    line-height: 1.6;
+}
+
+
+/* ---------- 12 COLUMN GRID (float) ---------- */
+[class*="col-"] {
+    float: left;
+    padding: 20px 30px;
+}
+
+.col-4 { width: 33.33%; }
+.col-8 { width: 66.66%; }
+
+.row::after {              /* clearfix */
+    content: "";
+    display: block;
+    clear: both;
+}
+
+
+/* ---------- HEADER ---------- */
+header {
+    max-width: 900px;
+    margin: 30px auto 0 auto;
+    background-color: white;
+    border-top: 8px solid #ff9800;
+    padding: 30px 30px 15px 30px;
+}
+
+header h1 {
+    font-size: 36px;
+}
+
+header p {
+    color: #e65100;
+}
+
+
+/* ---------- NAV (sticky) ---------- */
+nav {
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    max-width: 900px;
+    margin: 0 auto;
+    background-color: #ffcc80;
+    text-align: center;
+}
+
+nav a {
+    display: inline-block;
+    padding: 10px 18px;
+    color: #333;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+nav a:hover {
+    background-color: #e65100;
+    color: white;
+}
+
+
+/* ---------- MAIN ---------- */
+main {
+    max-width: 900px;
+    margin: 0 auto;
+    background-color: white;
+    animation: pageEnter 0.8s ease-out;
+}
+
+section {
+    margin-bottom: 20px;
+}
+
+h2 {
+    font-size: 16px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: #e65100;
+    border-left: 4px solid #ffb74d;
+    padding-left: 10px;
+    margin-bottom: 12px;
+}
+
+article {
+    margin-bottom: 14px;
+}
+
+h3 {
+    font-size: 16px;
+}
+
+article p {
+    color: #666;
+    font-size: 14px;
+}
+
+address {
+    font-style: normal;
+    color: #666;
+    font-size: 14px;
+}
+
+ul {
+    list-style: none;
+}
+
+li {
+    display: inline-block;
+    background-color: #ffe0b2;
+    padding: 3px 12px;
+    border-radius: 12px;
+    margin: 0 4px 8px 0;
+    font-size: 14px;
+    transition: transform 0.3s;
+}
+
+li:hover {
+    transform: translateY(-3px);
+}
+
+mark {
+    background-color: #ffe0b2;
+    padding: 0 3px;
+    animation: highlight 2s ease-out;
+}
+
+
+/* ---------- FOOTER ---------- */
+footer {
+    max-width: 900px;
+    margin: 0 auto 30px auto;
+    background-color: #e65100;
+    color: white;
+    text-align: center;
+    padding: 12px;
+    font-size: 14px;
+}
+
+
+/* ---------- ANIMATIONS ---------- */
+@keyframes pageEnter {
+    from {
+        opacity: 0;
+        transform: translateY(15px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes highlight {
+    from { background-color: #ff9800; }
+    to   { background-color: #ffe0b2; }
+}
+
+
+/* ---------- MEDIA QUERIES ---------- */
+
+/* tablets: columns stack, each takes all 12 columns */
+@media screen and (max-width: 768px) {
+    [class*="col-"] {
+        width: 100%;
+        padding: 15px 20px;
+    }
+
+    header {
+        padding: 20px 20px 10px 20px;
+    }
+}
+
+/* phones: smaller text and smaller nav links */
+@media screen and (max-width: 480px) {
+    header h1 {
+        font-size: 28px;
+    }
+
+    nav a {
+        padding: 8px 8px;
+        font-size: 14px;
+    }
+}
+
+/* people who do not want animation */
+@media (prefers-reduced-motion: reduce) {
+    main,
+    mark {
+        animation: none;
+    }
+
+    nav a,
+    li {
+        transition: none;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<header>
+    <h1>Shehroz Riaz</h1>
+    <p>BS Computer Science Student</p>
+    <address>NUST Balochistan Campus, Quetta</address>
+</header>
+
+<nav>
+    <a href="#education">Education</a>
+    <a href="#experience">Experience</a>
+    <a href="#projects">Projects</a>
+    <a href="#skills">Skills</a>
+    <a href="#contact">Contact</a>
+</nav>
+
+<main>
+    <div class="row">
+
+        <div class="col-8">
+            <section id="education">
+                <h2>Education</h2>
+                <article>
+                    <h3>BS Computer Science</h3>
+                    <p>NUST Balochistan Campus, Quetta | 5th semester</p>
+                </article>
+            </section>
+
+            <section id="experience">
+                <h2>Experience</h2>
+                <article>
+                    <h3>Intern, Pro-Rector RIC (Research, Innovation and Commercialization)</h3>
+                    <p>National University of Sciences and Technology (NUST), H-12 Campus</p>
+                    <p>Built the <mark>AI Research Paper Summarizer</mark></p>
+                </article>
+                <article>
+                    <h3>Intern, No. 118 Software Engineering Depot</h3>
+                    <p>Pakistan Air Force | <time datetime="2026-06">June 2026</time> to <time datetime="2026-07">July 2026</time></p>
+                </article>
+            </section>
+
+            <section id="projects">
+                <h2>Projects</h2>
+                <article>
+                    <h3>AI Research Paper Summarizer</h3>
+                    <p>Summarizes research papers using Gemini and Groq models. Built during the RIC internship.</p>
+                </article>
+                <article>
+                    <h3>Softfall</h3>
+                    <p>An ambient weather app for macOS.</p>
+                </article>
+            </section>
+        </div>
+
+        <div class="col-4">
+            <aside>
+                <section id="skills">
+                    <h2>Skills</h2>
+                    <ul>
+                        <li>HTML</li>
+                        <li>CSS</li>
+                        <li>Python</li>
+                        <li>FastAPI</li>
+                        <li>Git</li>
+                        <li>GitHub</li>
+                    </ul>
+                </section>
+
+                <section id="contact">
+                    <h2>Contact</h2>
+                    <address>
+                        zorhehs@gmail.com<br>
+                        github.com/zorhehs<br>
+                        linkedin.com/in/zorhehs
+                    </address>
+                </section>
+            </aside>
+        </div>
+
+    </div>
+</main>
+
+<footer>
+    <p>&copy; 2026 Shehroz Riaz</p>
+</footer>
+
+</body>
+</html>
