@@ -5,10 +5,8 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Shehroz Riaz - Resume</title>
 
-<!-- Web Engineering Lab 4 | Sehrosh Riaz | ID: 502741 -->
-
 <style>
-/* ---------- RESET (box model) ---------- */
+
 * {
     box-sizing: border-box;
     margin: 0;
@@ -27,7 +25,7 @@ body {
 }
 
 
-/* ---------- 12 COLUMN GRID (float) ---------- */
+
 [class*="col-"] {
     float: left;
     padding: 20px 30px;
@@ -36,14 +34,14 @@ body {
 .col-4 { width: 33.33%; }
 .col-8 { width: 66.66%; }
 
-.row::after {              /* clearfix */
+.row::after {              
     content: "";
     display: block;
     clear: both;
 }
 
 
-/* ---------- HEADER ---------- */
+
 header {
     max-width: 900px;
     margin: 30px auto 0 auto;
@@ -61,7 +59,7 @@ header p {
 }
 
 
-/* ---------- NAV (sticky) ---------- */
+
 nav {
     position: sticky;
     top: 0;
@@ -87,7 +85,7 @@ nav a:hover {
 }
 
 
-/* ---------- MAIN ---------- */
+
 main {
     max-width: 900px;
     margin: 0 auto;
@@ -153,7 +151,7 @@ mark {
 }
 
 
-/* ---------- FOOTER ---------- */
+
 footer {
     max-width: 900px;
     margin: 0 auto 30px auto;
@@ -165,7 +163,7 @@ footer {
 }
 
 
-/* ---------- ANIMATIONS ---------- */
+
 @keyframes pageEnter {
     from {
         opacity: 0;
@@ -183,9 +181,9 @@ footer {
 }
 
 
-/* ---------- MEDIA QUERIES ---------- */
 
-/* tablets: columns stack, each takes all 12 columns */
+
+
 @media screen and (max-width: 768px) {
     [class*="col-"] {
         width: 100%;
@@ -197,7 +195,7 @@ footer {
     }
 }
 
-/* phones: smaller text and smaller nav links */
+
 @media screen and (max-width: 480px) {
     header h1 {
         font-size: 28px;
@@ -209,7 +207,7 @@ footer {
     }
 }
 
-/* people who do not want animation */
+
 @media (prefers-reduced-motion: reduce) {
     main,
     mark {
